@@ -11,10 +11,10 @@ jobs:
         with:
           node-version: 19
       - name: Install backend depedency
-        working-directory: ./wulkanowy-bridge/backend
+        working-directory: backend
         run: npm install
       - name: Run backend lint
-        working-directory: ./wulkanowy-bridge/backend
+        working-directory: backend
         run: npm run lint
   frontend-lint:
     runs-on: ubuntu-latest
@@ -26,10 +26,10 @@ jobs:
         with:
           node-version: 19
       - name: Install frontend depedency
-        working-directory: ./wulkanowy-bridge/frontend
+        working-directory: frontend
         run: npm install
       - name: Run frontend lint
-        working-directory: ./wulkanowy-bridge/frontend
+        working-directory: frontend
         run: npm run lint
   build:
     runs-on: ubuntu-latest
@@ -44,9 +44,9 @@ jobs:
         with:
           node-version: 19
       - name: Install dependencies
-        working-directory: ./wulkanowy-bridge/frontend
+        working-directory: frontend
         run: npm install
       - name: Build frontend
-        working-directory: ./wulkanowy-bridge/frontend
+        working-directory: frontend
         run: npm run build
         
